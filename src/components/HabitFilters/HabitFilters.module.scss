@@ -1,0 +1,64 @@
+.div {
+  width: 100%;
+  height: 230px;
+  position: sticky;
+  top: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-inline: 20px;
+  justify-content: center;
+  animation-name: scrolling-sidebar;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 100px 200px;
+
+  @keyframes scrolling-sidebar {
+    to {
+      border-color: #b5b5b5; 
+      
+      box-shadow: 
+        0 12px 28px rgba(0, 0, 0, 0.08),
+        0 4px 10px rgba(0, 0, 0, 0.04);   
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  label {
+    font-size: 14px;
+    color: #666666;
+    text-transform: capitalize;
+  }
+}
+
+
+.select {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 14px;
+  background-color: #ffffff;
+  width: 150px;
+  text-overflow: ellipsis;
+  height: 40px;
+  padding-inline: 10px;
+
+  &:focus {
+    border-color: #999999; 
+  }
+}

@@ -1,0 +1,17 @@
+.form {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  height: 170px;
+  padding-inline: 20px;
+}
+
+
+.div {
+  display: flex;
+  gap: 12px;
+}

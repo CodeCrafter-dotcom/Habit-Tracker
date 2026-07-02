@@ -1,0 +1,13 @@
+main {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 10px;
+    padding-inline: 15px;
+    
+    .section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+    }
+}

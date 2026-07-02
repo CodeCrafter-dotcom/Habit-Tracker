@@ -1,0 +1,88 @@
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.taskCard {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 
+                0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+
+    h1 {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #94a3b8;
+        margin-bottom: 24px;
+    }
+}
+
+.taskTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.taskInfoGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 20px;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.infoLabel {
+    color: #64748b;
+}
+
+.badgeCategory {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.streakCount {
+    font-weight: 600;
+    color: #f59e0b;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.statusCompleted {
+    color: #15803d;
+    background-color: #dcfce7;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.statusPending {
+    color: #b91c1c;
+    background-color: #fee2e2;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 13px;
+}

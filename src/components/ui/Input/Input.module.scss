@@ -1,0 +1,83 @@
+.input {
+    width: 230px;
+    height: 40px;
+    border-radius: var(--radius);
+    padding-left: 12px;
+    border: 1px solid var(--border-color);
+    font-size: 14px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: #999999; 
+    }
+
+    --fieldInputPaddingX: 16px;
+    --fieldSearchInputIconSize: 16px;
+    &[type="search"] {
+
+        border: 1px solid #e0e0e0;
+        
+        padding-right: calc(var(--fieldInputPaddingX) * 2 + var(--fieldSearchInputIconSize));
+        background-image: url('../../../assets/icon-search_black.svg');
+        background-position: calc(100% - var(--fieldInputPaddingX)) 50%;
+        background-size: var(--fieldSearchInputIconSize);
+        background-repeat: no-repeat;
+    
+
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            -webkit-appearance: none; 
+            appearance: none;
+            display: none; 
+        }
+
+        &:focus {
+            border-color: #999999;
+        }
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+
+@keyframes shakeAnimation {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.error {
+    animation: shakeAnimation 0.5s linear;
+    border-color: red;
+    &::placeholder {
+        color: red;
+    }
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    translate: 0 -50%;
+    color: gray;
+    font-size: 16px;
+}
+
+.field {
+    position: relative;
+  
+    &:has(.input:focus, .input:not(:placeholder-shown)) .label {
+        color: black;
+        scale: 0.8;
+        translate: -1.30em -2.6em;
+    }
+
+    &:has(.input.error) .label {
+        color: red;
+    }
+}

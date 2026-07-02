@@ -1,0 +1,28 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+label,
+button {
+  transition-duration: var(--transition-duration);
+}
+
+:focus-visible {
+  outline: rem(2) solid var(--color-black) ;
+  transition-duration: 0s;
+}
+
+input, select {
+  outline: none !important;
+}
+
+::placeholder {
+  font-size: 16px;
+}
