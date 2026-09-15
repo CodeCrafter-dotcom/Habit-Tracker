@@ -48,7 +48,7 @@ const Card = (props: CardProps): JSX.Element => {
                         {card.category}
                     </span>
                     <span className={styles.streakInfo}>
-                    🔥 Streak: <strong>{card.streak}</strong> {card.streak === 1 ? 'день' : card.streak > 1 && card.streak < 5 ? 'дня' : 'дней'}
+                    🔥 Streak: <strong>{card.streak}</strong> {card.streak === 1 ? 'day' : 'days'}
                     </span>
                 </div>
             </div>
